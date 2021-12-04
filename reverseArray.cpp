@@ -4,14 +4,19 @@ using namespace std;
 int A[100],i,n; 
 
 
-void inputArray(int n)
+void inputArray()
 {
+    cout<<"Enter the num of elements you want in the array: ";
+    cin>>n;
+
+    cout<<"\nenter elements: ";
     for( i=0; i<n; i++)
     {
-        cin>>A[i];
-        
+        cin>>A[i];    
     }
+
     cout<<"\nentered array: ";
+    
     for( i=0; i<n; i++)
     {
         cout<<A[i]<<" ";
@@ -19,8 +24,10 @@ void inputArray(int n)
 
     
 }
-void reverseArray(int n)
+void reverseArray()
 {
+    cout<<"\nthe reversed array is: ";
+
     for(i=(n-1); i>=0; i--)
     {
         cout<<A[i]<<" ";
@@ -29,11 +36,8 @@ void reverseArray(int n)
 
 int main()
 {
-    cout<<"Enter the num of elements you want in the array: ";
-    cin>>n;
-    cout<<"\nenter elements: ";
-    inputArray(n);
-    cout<<"\nthe reversed array is: ";
-    reverseArray(n);
+    inputArray();
+    reverseArray();
+
     return 0;
 }
