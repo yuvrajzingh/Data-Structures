@@ -3,6 +3,7 @@ using namespace std;
 
 
 
+
 int arr[100], size , i;
 int maxi;
 int mini;
