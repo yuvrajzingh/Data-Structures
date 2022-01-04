@@ -1,14 +1,14 @@
 #include <iostream>
 using namespace std;
 
-class node
+class Node
 {
 public:
     int data;
-    node *next;
+    Node *next;
 };
 
-void linkedListTraversal(node *ptr)
+void linkedListTraversal(Node *ptr)
 {
     while (ptr != NULL)
     {
@@ -17,9 +17,9 @@ void linkedListTraversal(node *ptr)
     }
 }
 
-class node *InsertionAtBeginning(class node *head, int data)
+class Node *InsertionAtBeginning(class Node *head, int data)
 {
-    class node * ptr =  new node();
+    class Node * ptr =  new Node();
     ptr->next = head;
     ptr->data = data;
     return ptr;
@@ -27,15 +27,15 @@ class node *InsertionAtBeginning(class node *head, int data)
 
 int main()
 {
-    node *head;
-    node *second;
-    node *third;
-    node *fourth;
+    Node *head;
+    Node *second;
+    Node *third;
+    Node *fourth;
 
-    head = new node();
-    second = new node();
-    third = new node();
-    fourth = new node();
+    head = new Node();
+    second = new Node();
+    third = new Node();
+    fourth = new Node();
 
     head->data = 7;
     head->next = second;
