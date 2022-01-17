@@ -2,8 +2,8 @@
 using namespace std;
 class Node {
     public:
-   int data;
-   struct Node *next;
+        int data;
+        Node *next;
 };
 class Node* top = NULL;
 void push(int val) {
