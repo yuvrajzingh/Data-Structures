@@ -27,7 +27,19 @@ void pop()
         top--;
     }
 }
-
+int peek(int i)
+{
+    int arrInd = top - i;
+    if(arrInd < 0)
+    {
+        cout<<"Not a valid position for the stack\n";
+        return -1;
+    }
+    else
+    {
+        return stack[arrInd];
+    }
+}
 void display()
 {
     if(top>=0)
@@ -46,11 +58,12 @@ void display()
 
 int main()
 {
-    int ch, val;
+    int ch, val, i;
     cout<<"1) Push in stack"<<endl;
-    cout<<"2) Ppp in stack"<<endl;
-    cout<<"3) Display stack"<<endl;
-    cout<<"4) Exit"<<endl;
+    cout<<"2) Pop in stack"<<endl;
+    cout<<"3) Peek at any position in stack"<<endl;
+    cout<<"4) Display stack"<<endl;
+    cout<<"5) Exit"<<endl;
 
     do
     {
@@ -72,10 +85,17 @@ int main()
             }
             case 3:
             {
+                cout<<"Enter the index at which you want to peek:"<<endl;
+                cin >> i;
+                cout<<"Peak function called - Value at postion "<<i<<" is "<<peek(i)<<endl;
+                break;
+            }
+            case 4:
+            {
                 display();
                 break;
             }
-            case 4: 
+            case 5: 
             {
                 cout<<"Exit"<<endl;
                 break;
@@ -87,7 +107,7 @@ int main()
         }
     
     }
-    while(ch!=4);
+    while(ch!=5);
 
     return 0;
 }
