@@ -28,7 +28,7 @@ int main()
 
     if(sum==s)
     {
-        cout<< i+1 <<" "<<j <<endl;
+        cout<<"The subarray starts from position: "<<i+1<<"\nto position : "<<j<<endl;
         return 0;
     }
 
